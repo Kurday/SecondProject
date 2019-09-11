@@ -1,0 +1,155 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+
+	&.ishome
+		.site-header
+			min-height: 700px
+			height: 100vh
+			background-color: $dark
+			color: #fff
+			.top-line
+				padding-top: 40px
+				position: absolute
+				width: 100%
+				z-index: 1
+.logo
+	img
+		width: 125px
+		height: auto
+		margin-left: 45px
+
+.phone
+	position: absolute
+	right: 85px
+	top: 44px
+	font-family:  sans-serif
+	font-size: 22px
+	white-space: nowrap	
+	.fa
+		color: #555
+		font-size: 22px
+		margin-right: 3px
+
+
+
+section, header
+	position: relative
+	background-size: cover
+	background-position: center
+
+section
+	background-color: #fff
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.hamburger
+	right: 0
+	position: absolute
+	top: 34px
+	.hamburger-box
+		width: 34px
+		
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+	border-radius: 0
+	width: 34px
+	height: 2px
+	background-color: #fff
+
+	.main-menu
+		text-align: center
+		font-size: 14px
+		ul
+			list-style-type: none
+			padding: 0
+			margin: 0
+			li
+				display: inline-block
+				position: relative
+				margin-right: -4px
+				&.active, &:hover
+					a
+						background-color: #2c2c2c
+						color: $accent
+						&::before
+							color: $accent
+				&.active
+					a
+						background-color: #323232
+				a
+					color: #979797
+					text-decoration: underline
+					display: block
+					padding: 24px 20px 25px 35px
+					margin-top: -20px
+					margin-bottom: -20px
+					transition: color .25s ease, background-color .5s ease
+					min-height: 75px
+					&::before
+						transition: color .25s ease
+						content: '\f219'
+						font-family: fontawesome
+						margin-right: 8px
+						text-decoration: none
+						font-size: 12px
+						color: #979797
+						position: absolute
+						left: 15px
+						top: 8px
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+@import "media" // Всегда в конце
