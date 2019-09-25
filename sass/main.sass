@@ -102,7 +102,10 @@ html.mm-opened
 .mm-listview>li:not(.mm-divider):after
 	display: none
 .mm-panels>.mm-panel>.mm-listview:first-child, .mm-panels>.mm-panel>.mm-navbar+.mm-listview
-	margin-top: 0
+	margin-top: 70px
+.mm-menu.mm-theme-black .mm-navbar a, .mm-menu.mm-theme-black .mm-navbar>*, .mm-menu.mm-theme-black em.mm-counter
+	margin-top: 45px
+
 .hamburger-box
 	width: 34px
 .hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
@@ -203,6 +206,159 @@ a, button
 					position: absolute
 					left: 15px
 					top: 8px
+
+
+
+.header-flex
+	display: flex
+	height: 100%
+	position: relative
+	top: 0
+
+.flex-center
+	margin: auto
+
+.header-composition
+	text-align: center
+	position: relative
+	p
+		margin-top: 40px
+	.button
+		margin-top: 25px
+
+.welcome
+	p
+		font-size: 14px
+		font-weight: 300
+		text-transform: uppercase
+		display: flex
+		align-items: center
+		white-space: nowrap
+		margin: 0
+		margin-bottom: -10px
+		span
+			margin: 0 10px
+		&::before, &::after
+			content: ''
+			height: 1px
+			width: 100%
+			position: relative
+			background-color: #fff
+			display: inline-block
+	h1
+		font-weight: 100
+		text-transform: uppercase
+		font-size: 70px
+		margin: 0
+		line-height: 1.6
+		border-bottom: 1px solid #fff
+		white-space: nowrap
+	strong
+		font-weight: 300
+		text-transform: uppercase
+		font-size: 18px
+		margin-top: 25px
+		display: block
+		.fa
+			margin-right: 10px
+			font-size: 12px
+			color: #555
+			&:last-child
+				margin-right: inherit
+				margin-left: 10px
+
+.top
+	position: fixed
+	bottom: 25px
+	background-color: #E0E0E0
+	border-radius: 10em
+	color: #666
+	font-size: 26px
+	width: 50px
+	height: 50px
+	line-height: 50px
+	text-align: center
+	cursor: pointer
+	transition: all .25s ease
+	right: -100px
+	z-index: 12
+	opacity: .5
+	&.active
+		right: 30px
+	i
+		line-height: 0
+	&:hover
+		color: #fff
+		background-color: $accent
+		opacity: 1
+
+.button
+	display: inline-block
+	border: none
+	color: #fff
+	text-decoration: none
+	background-color: $accent
+	padding: 16px 45px
+	font-size: 13px
+	text-transform: uppercase
+	font-weight: 600
+	letter-spacing: 3px
+	border-radius: 2px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	&::after
+		transition: background-color .2s ease
+		position: absolute
+		content: ''
+		height: 4px
+		bottom: 0
+		width: 100%
+		background-color: darken($accent, 50%)
+		opacity: .18
+		border-bottom-left-radius: 2px
+		border-bottom-right-radius: 2px
+		left: 0
+	&:focus, &:hover
+		text-decoration: none
+		color: #fff
+	&:hover
+		background-color: lighten($accent, 5%)
+		&::after
+			opacity: .22
+	&:active
+		background-color: darken($accent, 5%)
+		&::after
+			opacity: .32
+
+	&.button-white
+		background-color: #fff
+		color: #444
+		&::after
+			background-color: rgba(#000, .6)
+		&:hover
+			&::after
+				background-color: rgba(#000, .2)
+		&:active
+			&::after
+				background-color: rgba(#000, .4)
+
+	&.button-dark
+		background-color: #4d4d4d
+		color: #fff
+		&::after
+			background-color: $accent
+			opacity: 1
+		&:hover
+			background-color: lighten(#4d4d4d, 5)
+		&:active
+			&::after
+				background-color: rgba($accent, .2)
+			background-color: darken(#4d4d4d, 2)
+
+.button-wrap
+	text-align: center
 
 .text-center
 	text-align: center
