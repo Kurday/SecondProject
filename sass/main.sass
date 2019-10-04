@@ -208,6 +208,7 @@ a, button
 					top: 8px
 
 
+// Начало секции композиция
 
 .header-flex
 	display: flex
@@ -292,6 +293,8 @@ a, button
 		background-color: $accent
 		opacity: 1
 
+
+ 				// Полезный стандартизированный шаблон для кнопки
 .button
 	display: inline-block
 	border: none
@@ -359,6 +362,58 @@ a, button
 
 .button-wrap
 	text-align: center
+// Конец Полезного шаблона для кнопки
+// конец композиции
+
+
+//правый блок сошиал
+.header-social
+	display: flex
+	position: absolute
+	right: 0
+	padding: 0 12.5px
+	height: 100%
+	border-left: rgba(255,255,255,.06) 1px solid
+	top: 0
+
+
+.soc
+	margin: auto
+	ul,li
+		margin: 0
+		padding: 0
+		list-style-type: none
+	a
+		color: #353535
+		font-size: 16px
+		display: block
+		background-color: rgba(255,255,255,.25)
+		width: 38px
+		height: 38px
+		text-align: center
+		line-height: 38px
+		border-radius: 10em
+		transition: background-color .25s ease
+		margin: 18px 0
+		&:hover
+			background-color: rgba(255,255,255,.4)
+
+.header-contacts
+	position: absolute
+	bottom: 0
+	left: 0
+	border-top: rgba(255,255,255,.06) 1px solid
+	padding: 12.5px
+	width: 100%
+	background-color: rgba(#151515, .15)
+	font-weight: 300
+	font-size: 14px
+	.fa
+		margin-right: 5px
+		color: #555
+	>.container>.row>div:nth-child(2)
+		font-family: aria
+		text-align: center	
 
 .text-center
 	text-align: center
