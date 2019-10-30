@@ -87,6 +87,12 @@ section
 	&.inverse
 		color: #fff
 		background-color: $dark
+	h2
+		font-size: 30px
+		font-weight: 800
+		color: $accent
+		span
+			color: #fff
 
 
 .img-responsive
@@ -569,4 +575,40 @@ $colors: $blue, $red, $accent
 	> *
 		position: relative			
 
+.fotorama
+	background-color: rgba(#151515, .4)
+.fotorama__nav
+	&-wrap
+		bottom: 15px
+		position: absolute
+		padding: 0 30px
+		width: 100%
+.fotorama__thumb
+	border: 4px #fff solid
+	transition: border-color .5s ease
+	&-border
+		border-color: #3d3c3c
+
+.fotorama__active
+	.fotorama__thumb
+		border-color: #3d3c3c
+
+.fotorama__nav:before
+	left: 0
+.fotorama__nav.fotorama__shadows--right:after, .fotorama__stage.fotorama__shadows--right:after
+	right: -1px
+.fotorama__arr
+	background: none
+.fotorama__arr-
+	&-next, &-prev
+		&::before
+			font-family: fontawesome
+			font-size: 32px
+	&-next
+		&::before
+			content: '\f105'
+	&-prev
+		left: 25px
+		&::before
+			content: '\f104'
 @import "media" // Всегда в конце
