@@ -46,6 +46,38 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 
+//Preloader
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	background-color: #151515
+	z-index: 100
+@mixin opacity($opacity)
+	opacity: $opacity / 100
+	filter: alpha(opacity=$opacity)
+.pulse
+	position: relative
+	left: 50%
+	top: 50vh
+	margin:
+		left: -40px
+		top: -40px
+	&:before, &:after
+		content: ''
+		border: 5px solid #323232
+		width: 80px
+		height: 80px
+		border-radius: 500px
+		position: absolute
+	&:before
+		animation: pulse-outer .8s ease-in infinite
+	&:after
+		animation: pulse-inner .8s linear infinite
+
+
 	&.ishome
 		.site-header
 			min-height: 700px
@@ -690,4 +722,31 @@ $colors: $blue, $red, $accent
 			.fa
 				color: #999
 				font-size: 30px			
+
+.s
+	&-king, &-review, &-partners
+		padding: 5% 0
+		background-color: #151515
+		strong
+			color: $accent
+		p
+			margin: 30px 0
+	&-call
+		background-size: contain
+		background-repeat: no-repeat
+		background-color: #fff
+		background-position: 25%
+		&::before
+			content: ''
+			width: 50%
+			right: 0
+			position: absolute
+			height: 100%
+			background-color: rgba($accent, .92)
+	&-partners
+		&::before
+			background-color: #fff
+		h2
+			margin-top: 0
+			color: $accent				
 @import "media" // Всегда в конце
